@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <title>Carrito de compras</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header id="header">
+        <h1>Shopping Car</h1> 
+    </header>
+    <div id="contenedor" class="contenedor">
+        <div class="product" data-id="1" data-name="Producto 1" data-price="199.99">
+            <img src="img/imagen1.webp" alt="producto 1">
+            <div class="informacion">
+                <p>Producto 1</p>
+                <p class="precio">$199<span>.99</span></p>
+                <button onclick="addToCart(1)">Comprar</button>
+            </div>
+        </div>
+        <div class="product" data-id="2" data-name="Producto 2" data-price="299.99">
+            <img src="img/imagen2.webp" alt="producto 2">
+            <div class="informacion">
+                <p>Producto 2</p>                   
+                <p class="precio">$299<span>.99</span></p>
+                <button onclick="addToCart(2)">Comprar</button>
+            </div>
+        </div>
+        
+    </div>
+
+    <div id="carr">
+        <h1>Carrito</h1>
+        <div id="cart" class="cart"></div>
+        <div>Total: $<span id="total">0</span></div>
+        <button onclick="clearCart()">Vaciar Carrito</button>
+    </div>
+
+    <script src="car.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronometro</title>
+    <link rel="stylesheet" href="cronometro.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-t from-white to-sky-300">
+    <main class="w-full h-screen flex justify-center items-center">
+        <div id="frame" class="bg-blue-300 w-4/5 h-3/5 flex justify-center items-center rounded-full">
+            <div id="time" class="w-4/5 xl:w-3/5 h-2/5 md:h-3/5 xl:h-3/5 py-5 flex justify-center items-start border-2 border-black bg-slate-600 rounded-3xl text-white text-4xl md:text-6xl xl:text-7xl 2xl:text-9xl">
+                00:00:00.000
+            </div>
+            <div class="w-60 md:w-80 xl:w-[450px] flex absolute justify-between items-center text-3xl text-white translate-y-9 2xl:translate-y-20">
+                <button id="btn-play" class="w-14 2xl:w-24" onclick="start()">
+                    <img src="images/play.png" alt="">
+                </button>
+                <button id="btn-stop" class="w-14 2xl:w-24" onclick="stop()">
+                    <img src="images/stop.png" alt="">
+                </button>
+                <button id="btn-reset" class="w-14 2xl:w-24" onclick="reset()">
+                    <img src="images/reset.png" alt="">
+                </button>
+                <button class="w-14 2xl:w-24" onclick="lap()">
+                    <img src="images/loop.png" alt="">
+                </button>
+            </div>
+            <div id="laps" class=" bg-slate-600 rounded translate-x-4 flex-col justify-center items-center text-white text-xl"></div>
+        </div>
+    </main>
+    <script src="cronometro.js"></script>
+</body>
+</html>
